@@ -5,6 +5,7 @@
 <h1>我叫<span id="myname"></span></h1>
     <p>我的学号是<span id="mynumber"></span>
     </p>
+   <button id="btn" value="下一个"></button>
     <img src="matrix.png" >
     <img id="logo" src="logo.jpg" style="border-radius: 10px 20px 40px 80px" height="300" width="600">
 <script>
@@ -12,6 +13,12 @@ $(function(){
 $.get("./data.json",function(result){
     $("#myname").text(result.myname);
     $("#mynumber").text(result.mynumber);
+});
+})
+$("#btn").click(function(){
+$.get(".data1.json",function(result){
+    $("myname").text(result.myname);
+    $("mynumber").text(result.mynumber);
 });
 })
 </script>    
